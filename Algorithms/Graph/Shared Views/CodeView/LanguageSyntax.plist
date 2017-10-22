@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>purple</key>
+	<array>
+		<string>0x5B2699</string>
+		<string>Int</string>
+		<string>count</string>
+		<string>append</string>
+	</array>
+	<key>blue</key>
+	<array>
+		<string>0x2A2EE3</string>
+		<string>0</string>
+		<string>1</string>
+		<string>2</string>
+	</array>
+	<key>pink</key>
+	<array>
+		<string>0xBE0A91</string>
+		<string>func</string>
+		<string>return</string>
+		<string>var</string>
+		<string>let</string>
+		<string>while</string>
+		<string>repeat</string>
+		<string>inout</string>
+		<string>int</string>
+		<string>void</string>
+		<string>for</string>
+		<string>if</string>
+		<string>else</string>
+		<string>do</string>
+		<string>in</string>
+		<string>function</string>
+		<string>each</string>
+	</array>
+	<key>green</key>
+	<array>
+		<string>0x26474B</string>
+		<string>enqueue</string>
+		<string>dequeue</string>
+	</array>
+	<key>red</key>
+	<array>
+		<string>0xC81B17</string>
+		<string>Negative-weight cycle detected</string>
+	</array>
+</dict>
+</plist>

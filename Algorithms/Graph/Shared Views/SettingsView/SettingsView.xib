@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsView" customModule="Algorithms" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="O3U-rV-G28"/>
+                <outlet property="dataTypePicker" destination="Y9i-cS-C9s" id="c92-eN-ZF3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="623" height="76"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYW-Mw-dx5">
+                    <rect key="frame" x="110" y="23" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="0jh-OP-uoH"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="jTf-0W-UrR"/>
+                        <constraint firstAttribute="width" secondItem="DYW-Mw-dx5" secondAttribute="height" multiplier="1:1" id="z9A-vz-Mqg"/>
+                    </constraints>
+                    <state key="normal" title="Fast Forward" image="FastForwardIcon"/>
+                    <connections>
+                        <action selector="fastForwardButtonPressed:" destination="-1" eventType="touchUpInside" id="cY6-pr-asz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtD-Ox-n8g">
+                    <rect key="frame" x="155" y="23" width="30" height="30"/>
+                    <state key="normal" title="Step by step" image="ForwardIcon"/>
+                    <connections>
+                        <action selector="stepByStepButtonPressed:" destination="-1" eventType="touchUpInside" id="bMd-tA-ag6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OS0-Wq-haQ">
+                    <rect key="frame" x="548" y="8" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="OS0-Wq-haQ" secondAttribute="height" multiplier="1:1" id="aO6-qF-yQu"/>
+                    </constraints>
+                    <connections>
+                        <action selector="infoIconPressed:" destination="-1" eventType="touchUpInside" id="f0K-hf-t0F"/>
+                    </connections>
+                </button>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9i-cS-C9s">
+                    <rect key="frame" x="15" y="0.0" width="80" height="76"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="3w2-Wc-D56"/>
+                    </constraints>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JtD-Ox-n8g" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8Y9-oV-BbB"/>
+                <constraint firstAttribute="bottom" secondItem="Y9i-cS-C9s" secondAttribute="bottom" id="95O-fH-Fin"/>
+                <constraint firstItem="DYW-Mw-dx5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9CQ-vy-7oz"/>
+                <constraint firstAttribute="bottom" secondItem="OS0-Wq-haQ" secondAttribute="bottom" constant="8" id="9FT-vg-8ze"/>
+                <constraint firstItem="OS0-Wq-haQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="D51-md-Pc6"/>
+                <constraint firstItem="DYW-Mw-dx5" firstAttribute="leading" secondItem="Y9i-cS-C9s" secondAttribute="trailing" constant="15" id="F3Q-2M-osX"/>
+                <constraint firstAttribute="trailing" secondItem="OS0-Wq-haQ" secondAttribute="trailing" constant="15" id="FZZ-Y2-ONM"/>
+                <constraint firstItem="JtD-Ox-n8g" firstAttribute="leading" secondItem="DYW-Mw-dx5" secondAttribute="trailing" constant="15" id="WTs-kW-goZ"/>
+                <constraint firstItem="JtD-Ox-n8g" firstAttribute="height" secondItem="DYW-Mw-dx5" secondAttribute="height" id="Ypx-mn-Aef"/>
+                <constraint firstItem="Y9i-cS-C9s" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="q7s-E4-bqH"/>
+                <constraint firstItem="JtD-Ox-n8g" firstAttribute="width" secondItem="DYW-Mw-dx5" secondAttribute="width" id="vZv-mH-bV1"/>
+                <constraint firstItem="Y9i-cS-C9s" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="w6B-Iy-b7i"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-118.5" y="-115"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="FastForwardIcon" width="360" height="360"/>
+        <image name="ForwardIcon" width="360" height="360"/>
+    </resources>
+</document>

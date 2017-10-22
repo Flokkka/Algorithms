@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GraphView" customModule="Algorithms" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="51T-cF-bQ5"/>
+                <outlet property="negativeWeightCycleLabel" destination="IjN-2X-e3R" id="Ewd-d5-GqD"/>
+                <outletCollection property="verticeViews" destination="MiF-Zo-VDK" collectionClass="NSMutableArray" id="1rL-JY-rSZ"/>
+                <outletCollection property="verticeViews" destination="FHa-LZ-veb" collectionClass="NSMutableArray" id="dVt-z3-jHm"/>
+                <outletCollection property="verticeViews" destination="it9-ag-QQ6" collectionClass="NSMutableArray" id="wQH-8k-4O0"/>
+                <outletCollection property="verticeViews" destination="lIx-Rg-agf" collectionClass="NSMutableArray" id="MW8-Pf-jsO"/>
+                <outletCollection property="verticeViews" destination="2jO-hK-s39" collectionClass="NSMutableArray" id="QY1-gY-bQP"/>
+                <outletCollection property="verticeViews" destination="hgj-8W-hnO" collectionClass="NSMutableArray" id="RQh-bA-2Nn"/>
+                <outletCollection property="verticeViews" destination="xNt-SB-Et5" collectionClass="NSMutableArray" id="f54-PS-t9q"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1227" height="877"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiF-Zo-VDK" customClass="VerticeView" customModule="Algorithms" customModuleProvider="target">
+                    <rect key="frame" x="30.5" y="377" width="123" height="123"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MiF-Zo-VDK" secondAttribute="height" multiplier="1:1" id="usF-B1-EMe"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="0"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgj-8W-hnO" customClass="VerticeView" customModule="Algorithms" customModuleProvider="target">
+                    <rect key="frame" x="1043" y="421" width="122.5" height="122.5"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hgj-8W-hnO" secondAttribute="height" multiplier="1:1" id="Ggy-HO-esa"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="5"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-hK-s39" customClass="VerticeView" customModule="Algorithms" customModuleProvider="target">
+                    <rect key="frame" x="859" y="114" width="122.5" height="123"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="2jO-hK-s39" secondAttribute="height" multiplier="1:1" id="mVX-Jm-oZf"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="4"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="it9-ag-QQ6" customClass="VerticeView" customModule="Algorithms" customModuleProvider="target">
+                    <rect key="frame" x="613.5" y="596.5" width="122.5" height="122.5"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="it9-ag-QQ6" secondAttribute="height" multiplier="1:1" id="reb-fv-Zmc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="2"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHa-LZ-veb" customClass="VerticeView" customModule="Algorithms" customModuleProvider="target">
+                    <rect key="frame" x="307" y="684.5" width="122.5" height="122"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="FHa-LZ-veb" secondAttribute="height" multiplier="1:1" id="njF-6w-eDn"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIx-Rg-agf" customClass="VerticeView" customModule="Algorithms" customModuleProvider="target">
+                    <rect key="frame" x="552" y="70" width="123" height="123"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="3"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNt-SB-Et5" customClass="VerticeView" customModule="Algorithms" customModuleProvider="target">
+                    <rect key="frame" x="981.5" y="727.5" width="123" height="123.5"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="xNt-SB-Et5" secondAttribute="height" multiplier="1:1" id="Ivi-ph-pfa"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="6"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Negative-weight cycle detected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="IjN-2X-e3R">
+                    <rect key="frame" x="10" y="78.5" width="532" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="0.1022927345" blue="0.237056399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="it9-ag-QQ6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.1" id="1nn-vM-6ML"/>
+                <constraint firstItem="hgj-8W-hnO" firstAttribute="width" secondItem="MiF-Zo-VDK" secondAttribute="width" id="2AJ-9I-wrv"/>
+                <constraint firstItem="IjN-2X-e3R" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="2C4-DK-aRm"/>
+                <constraint firstItem="2jO-hK-s39" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.4" id="4iL-5s-hWy"/>
+                <constraint firstItem="xNt-SB-Et5" firstAttribute="width" secondItem="MiF-Zo-VDK" secondAttribute="width" id="6bO-hg-KtX"/>
+                <constraint firstItem="lIx-Rg-agf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6xd-pB-ATn"/>
+                <constraint firstItem="IjN-2X-e3R" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.2" id="8qH-an-FjU"/>
+                <constraint firstItem="FHa-LZ-veb" firstAttribute="width" secondItem="MiF-Zo-VDK" secondAttribute="width" id="9m5-iH-7ds"/>
+                <constraint firstItem="2jO-hK-s39" firstAttribute="width" secondItem="MiF-Zo-VDK" secondAttribute="width" id="DW3-G3-y6x"/>
+                <constraint firstItem="xNt-SB-Et5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.8" id="Dbb-Ws-Eh2"/>
+                <constraint firstItem="lIx-Rg-agf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.3" id="EGq-1t-bNW"/>
+                <constraint firstItem="lIx-Rg-agf" firstAttribute="width" secondItem="MiF-Zo-VDK" secondAttribute="width" id="H7t-6L-R6l"/>
+                <constraint firstItem="it9-ag-QQ6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.5" id="Hju-3e-muj"/>
+                <constraint firstItem="it9-ag-QQ6" firstAttribute="width" secondItem="MiF-Zo-VDK" secondAttribute="width" id="Sua-YI-kc3"/>
+                <constraint firstItem="FHa-LZ-veb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.7" id="TTx-oW-aDy"/>
+                <constraint firstItem="MiF-Zo-VDK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Tpr-jh-Oge"/>
+                <constraint firstItem="MiF-Zo-VDK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="0.15" id="eGv-Oa-rCe"/>
+                <constraint firstItem="hgj-8W-hnO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.1" id="l7o-hq-C2a"/>
+                <constraint firstItem="xNt-SB-Et5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.7" id="oUn-ll-vmi"/>
+                <constraint firstItem="MiF-Zo-VDK" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.1" id="pNR-Gq-nV3"/>
+                <constraint firstItem="hgj-8W-hnO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.8" id="pgj-t5-AtO"/>
+                <constraint firstItem="FHa-LZ-veb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="0.6" id="sYq-jt-5bT"/>
+                <constraint firstItem="IjN-2X-e3R" firstAttribute="trailing" secondItem="lIx-Rg-agf" secondAttribute="leading" constant="-10" id="uTA-6a-Ilf"/>
+                <constraint firstItem="2jO-hK-s39" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.5" id="vWo-HX-8ET"/>
+                <constraint firstItem="lIx-Rg-agf" firstAttribute="width" secondItem="lIx-Rg-agf" secondAttribute="height" multiplier="1:1" id="z5r-gs-xQh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="324.5" y="399.5"/>
+        </view>
+    </objects>
+</document>

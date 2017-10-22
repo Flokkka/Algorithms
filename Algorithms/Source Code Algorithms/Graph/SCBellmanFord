@@ -1,0 +1,19 @@
+function BellmanFord(list vertices, list edges, vertex source):
+
+    for each vertex v in vertices:
+        distance[v] := inf
+        predecessor[v] := null
+
+    distance[source] := 0
+
+    for i from 1 to size(vertices)-1:
+        for each edge (u, v) with weight w in edges:
+            if distance[u] + w < distance[v]:
+                distance[v] := distance[u] + w
+                predecessor[v] := u
+
+    for each edge (u, v) with weight w in edges:
+        if distance[u] + w < distance[v]:
+            error "Negative-weight cycle detected"
+
+    return distance[], predecessor[]

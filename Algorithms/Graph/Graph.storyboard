@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kxD-NZ-fjE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="DJ2-Zx-ot3">
+            <objects>
+                <navigationController id="kxD-NZ-fjE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H9z-Y2-AAa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="990-9d-tB0" kind="relationship" relationship="rootViewController" id="4lt-jx-ZL6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SJT-7e-Q1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1245" y="-310"/>
+        </scene>
+        <!--Graph Table View Controller-->
+        <scene sceneID="d5p-iC-IQ0">
+            <objects>
+                <tableViewController id="990-9d-tB0" customClass="GraphTableViewController" customModule="Algorithms" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pvs-fc-eJN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="J2d-RF-euz">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J2d-RF-euz" id="rME-UH-zXd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <connections>
+                                    <segue destination="k8l-bl-dKG" kind="show" identifier="goToGraphVC" id="LPg-yP-JcN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="990-9d-tB0" id="TyA-fG-vf1"/>
+                            <outlet property="delegate" destination="990-9d-tB0" id="9BS-um-e7a"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="rp0-eD-LpQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FdC-Yq-cik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="-311"/>
+        </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="tCf-M6-UKP">
+            <objects>
+                <viewController id="k8l-bl-dKG" customClass="GraphViewController" customModule="Algorithms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides/>
+                    <view key="view" contentMode="scaleToFill" id="hkx-zc-h29">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ood-CS-TXM" customClass="ChartView" customModule="Algorithms" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="348" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="100" id="6Cx-uN-Iak"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUV-Fb-kwe" customClass="CodeView" customModule="Algorithms" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="468" width="375" height="199"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mtj-im-b4X" customClass="DragView" customModule="Algorithms" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="447" width="60" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mtj-im-b4X" secondAttribute="height" multiplier="3:1" id="gB4-kJ-ck1"/>
+                                    <constraint firstAttribute="height" constant="20" id="jtt-T6-fdb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTB-DT-7yH" customClass="GraphView" customModule="Algorithms" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="144" width="375" height="194"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3J-vC-76d" customClass="SettingsView" customModule="Algorithms" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="84" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="mGU-5E-IeI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mtj-im-b4X" firstAttribute="centerX" secondItem="z03-Qy-SY9" secondAttribute="centerX" id="4jB-jT-a1U"/>
+                            <constraint firstItem="z3J-vC-76d" firstAttribute="leading" secondItem="z03-Qy-SY9" secondAttribute="leading" id="JBU-mK-p2N"/>
+                            <constraint firstItem="z3J-vC-76d" firstAttribute="top" secondItem="z03-Qy-SY9" secondAttribute="top" id="K8G-Ot-s6y"/>
+                            <constraint firstItem="z03-Qy-SY9" firstAttribute="bottom" secondItem="RUV-Fb-kwe" secondAttribute="bottom" id="Nkd-qj-9Tw"/>
+                            <constraint firstItem="RUV-Fb-kwe" firstAttribute="leading" secondItem="z03-Qy-SY9" secondAttribute="leading" id="PwY-W4-8Am"/>
+                            <constraint firstItem="ood-CS-TXM" firstAttribute="bottom" secondItem="Mtj-im-b4X" secondAttribute="top" constant="1" id="RcV-nh-w7U"/>
+                            <constraint firstItem="fTB-DT-7yH" firstAttribute="leading" secondItem="z03-Qy-SY9" secondAttribute="leading" id="Ybj-rO-Xkv"/>
+                            <constraint firstItem="RUV-Fb-kwe" firstAttribute="top" secondItem="Mtj-im-b4X" secondAttribute="bottom" constant="1" id="cVi-8i-P7L"/>
+                            <constraint firstItem="z03-Qy-SY9" firstAttribute="trailing" secondItem="z3J-vC-76d" secondAttribute="trailing" id="dWE-t4-s8x"/>
+                            <constraint firstItem="z03-Qy-SY9" firstAttribute="trailing" secondItem="fTB-DT-7yH" secondAttribute="trailing" id="fqv-rq-K9M"/>
+                            <constraint firstItem="z03-Qy-SY9" firstAttribute="bottom" secondItem="Mtj-im-b4X" secondAttribute="bottom" constant="200" id="gbn-6a-Kga"/>
+                            <constraint firstItem="z03-Qy-SY9" firstAttribute="trailing" secondItem="ood-CS-TXM" secondAttribute="trailing" id="he5-kn-dlo"/>
+                            <constraint firstItem="fTB-DT-7yH" firstAttribute="bottom" secondItem="ood-CS-TXM" secondAttribute="top" constant="-10" id="kG6-8a-8Dj"/>
+                            <constraint firstItem="fTB-DT-7yH" firstAttribute="top" secondItem="z3J-vC-76d" secondAttribute="bottom" priority="999" id="olC-dM-ojG"/>
+                            <constraint firstItem="z03-Qy-SY9" firstAttribute="trailing" secondItem="RUV-Fb-kwe" secondAttribute="trailing" id="qct-K0-gJV"/>
+                            <constraint firstItem="ood-CS-TXM" firstAttribute="leading" secondItem="z03-Qy-SY9" secondAttribute="leading" id="qmU-ob-0Kw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z03-Qy-SY9"/>
+                    </view>
+                    <connections>
+                        <outlet property="chartView" destination="ood-CS-TXM" id="Wp0-32-yJv"/>
+                        <outlet property="codeView" destination="RUV-Fb-kwe" id="7eA-1c-5u7"/>
+                        <outlet property="dragToBottomConstraint" destination="gbn-6a-Kga" id="pdY-DA-4n6"/>
+                        <outlet property="dragView" destination="Mtj-im-b4X" id="Fds-hh-0UZ"/>
+                        <outlet property="graphView" destination="fTB-DT-7yH" id="pNo-zR-TqF"/>
+                        <outlet property="settingsView" destination="z3J-vC-76d" id="9o0-lR-yfU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jTF-5B-v3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189.5999999999999" y="-299.10044977511245"/>
+        </scene>
+    </scenes>
+</document>
