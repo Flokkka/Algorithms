@@ -12,17 +12,14 @@ func sort(_ a: inout [Int], l: Int, r: Int) {
         if j > m {
             b[i] = a[k]
             k += 1
-        }
-        else if k > r {
+        } else if k > r {
             b[i] = a[j]
             j += 1
-        }
-        else {
+        } else {
             if a[j] <= a[k] {
                 b[i] = a[j]
                 j += 1
-            }
-            else {
+            } else {
                 b[i] = a[k]
                 k += 1
             }

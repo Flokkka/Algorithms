@@ -9,17 +9,17 @@
 import Foundation
 
 struct BFS: GraphInterface {
-    
-    public var name: String = "BFS"
-    public var worstCasePerformance: String = "O(|V|+|E|)"
-    public var limitations: String = "All weights must be 1."
-    
+
+    public var name = "BFS"
+    public var worstCasePerformance = "O(|V|+|E|)"
+    public var limitations = "All weights must be 1."
+
     public func go(start: Int, graph: Graph) -> [GraphSolutionStep] {
         var solutionSteps: [GraphSolutionStep] = []
         _ = bfs(start: start, graph: graph, solutionSteps: &solutionSteps)
         return solutionSteps
     }
-    
+
     public func bfs(start: Int, graph: Graph, solutionSteps: inout [GraphSolutionStep]) -> ([Int], [Int]) {
         var dist = [Int](repeating: Int.max, count: graph.verticesCount)
         var pred = [Int](repeating: -1, count: graph.verticesCount)

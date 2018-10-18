@@ -14,7 +14,7 @@ protocol SortInterface: AlgorithmInterface {
     var bestCase: String { get }
     var memory: String { get }
     var stable: Bool { get }
-    var method: String  { get }
-    
+    var method: String { get }
+
     func sort(_ a: inout [Int]) -> [SortSolutionStep]
 }

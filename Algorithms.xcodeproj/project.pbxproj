@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		371CB80BB08C035604D586DA /* Pods_AlgorithmsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0692A7E4CABCE3F862A256 /* Pods_AlgorithmsTests.framework */; };
 		499F5055BB9FAA08AD007A31 /* Pods_Algorithms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03F9D7424829753B2FEF31E /* Pods_Algorithms.framework */; };
 		9B0E97D21F6026DF00D9B050 /* GraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0E97D11F6026DF00D9B050 /* GraphView.xib */; };
 		9B0E97D41F6026F400D9B050 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0E97D31F6026F400D9B050 /* GraphView.swift */; };
@@ -17,6 +16,13 @@
 		9B2143271F617F1D00AEFCB9 /* GraphInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2143261F617F1D00AEFCB9 /* GraphInfoView.swift */; };
 		9B227C151F65646300499D33 /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B227C141F65646300499D33 /* ChartView.xib */; };
 		9B227C171F656BC000499D33 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B227C161F656BC000499D33 /* ChartView.swift */; };
+		9B2ECDF2217876C900CB1556 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2ECDF1217876C800CB1556 /* TabBarController.swift */; };
+		9B2ECDFA2178918F00CB1556 /* AlgorithmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2ECDF92178918F00CB1556 /* AlgorithmsTests.swift */; };
+		9B2ECE022178AB7100CB1556 /* BellmanFord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2ECE012178AB7100CB1556 /* BellmanFord.swift */; };
+		9B2ECE042178AB7800CB1556 /* BFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2ECE032178AB7800CB1556 /* BFS.swift */; };
+		9B2ECE062178AB7C00CB1556 /* Dijkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2ECE052178AB7B00CB1556 /* Dijkstra.swift */; };
+		9B2ECE092178AD3200CB1556 /* GraphTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2ECE072178AD3100CB1556 /* GraphTableViewCell.xib */; };
+		9B2ECE0A2178AD3200CB1556 /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2ECE082178AD3200CB1556 /* GraphTableViewCell.swift */; };
 		9B3F5E141F5995BB00A3D84C /* SortingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B3F5E131F5995BA00A3D84C /* SortingTableViewCell.xib */; };
 		9B3F5E161F5996E000A3D84C /* SortingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3F5E151F5996E000A3D84C /* SortingTableViewCell.swift */; };
 		9B3FA2DE1F5A9D870076106D /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FA2DD1F5A9D870076106D /* QuickSort.swift */; };
@@ -32,7 +38,6 @@
 		9B52E6BD1F5ED42600CC630B /* SCMergeSort.java in Resources */ = {isa = PBXBuildFile; fileRef = 9B52E6B71F5ED21E00CC630B /* SCMergeSort.java */; };
 		9B52E6BE1F5ED42800CC630B /* SCHeapSort.java in Resources */ = {isa = PBXBuildFile; fileRef = 9B52E6B91F5ED2A300CC630B /* SCHeapSort.java */; };
 		9B59B4701F618D1D006843A3 /* GraphSolutionStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B46F1F618D1D006843A3 /* GraphSolutionStep.swift */; };
-		9B59B4741F61CCB4006843A3 /* Dijkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B4731F61CCB4006843A3 /* Dijkstra.swift */; };
 		9B59B9C11F5E8FA5006524B4 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B9C01F5E8FA5006524B4 /* Languages.swift */; };
 		9B59B9C51F5E9C04006524B4 /* SCSelectionSort.swift in Resources */ = {isa = PBXBuildFile; fileRef = 9B59B9C31F5E9BC0006524B4 /* SCSelectionSort.swift */; };
 		9B59B9C81F5EA6B3006524B4 /* SCSelectionSort.c in Resources */ = {isa = PBXBuildFile; fileRef = 9B59B9C61F5E9C57006524B4 /* SCSelectionSort.c */; };
@@ -41,23 +46,17 @@
 		9B59B9D51F5EB5A6006524B4 /* SCQuickSort.swift in Resources */ = {isa = PBXBuildFile; fileRef = 9B59B9D11F5EB01C006524B4 /* SCQuickSort.swift */; };
 		9B59B9D61F5EB5A9006524B4 /* SCQuickSort.c in Resources */ = {isa = PBXBuildFile; fileRef = 9B59B9D31F5EB57F006524B4 /* SCQuickSort.c */; };
 		9B5A1B521F628434002AD785 /* AlgorithmInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A1B511F628434002AD785 /* AlgorithmInterface.swift */; };
-		9B5A1B541F6402B1002AD785 /* BellmanFord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A1B531F6402B1002AD785 /* BellmanFord.swift */; };
 		9B6C9B7D1F594FB700F812EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C9B7C1F594FB700F812EB /* AppDelegate.swift */; };
 		9B6C9B821F594FB700F812EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C9B801F594FB700F812EB /* Main.storyboard */; };
 		9B6C9B841F594FB700F812EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C9B831F594FB700F812EB /* Assets.xcassets */; };
 		9B6C9B871F594FB700F812EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C9B851F594FB700F812EB /* LaunchScreen.storyboard */; };
-		9B6C9B921F594FB800F812EB /* AlgorithmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C9B911F594FB800F812EB /* AlgorithmsTests.swift */; };
 		9B6C9BBD1F59581100F812EB /* Sorting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C9BBC1F59581100F812EB /* Sorting.storyboard */; };
 		9B6C9BBF1F59582000F812EB /* Graph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C9BBE1F59582000F812EB /* Graph.storyboard */; };
 		9B6C9BC11F5958EE00F812EB /* GraphTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C9BC01F5958EE00F812EB /* GraphTableViewController.swift */; };
 		9B6C9BC31F5958FF00F812EB /* SortingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C9BC21F5958FF00F812EB /* SortingTableViewController.swift */; };
-		9B6C9BC51F595A2A00F812EB /* ChildControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C9BC41F595A2A00F812EB /* ChildControllerProvider.swift */; };
-		9B6C9BCA1F595AC600F812EB /* TabBarConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C9BC91F595AC600F812EB /* TabBarConfiguration.plist */; };
-		9B6C9BCC1F595B0A00F812EB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C9BCB1F595B0A00F812EB /* TabBarController.swift */; };
 		9B7639631F66900100926C8F /* SCBFS in Resources */ = {isa = PBXBuildFile; fileRef = 9B7639621F66900100926C8F /* SCBFS */; };
 		9B7639661F66948C00926C8F /* SCBellmanFord in Resources */ = {isa = PBXBuildFile; fileRef = 9B7639641F66936300926C8F /* SCBellmanFord */; };
 		9B7639681F6698B000926C8F /* SCDijkstra in Resources */ = {isa = PBXBuildFile; fileRef = 9B7639671F6698B000926C8F /* SCDijkstra */; };
-		9B8312AE1F616EAD009269C1 /* BFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8312AD1F616EAD009269C1 /* BFS.swift */; };
 		9B8312B01F616ED3009269C1 /* GraphInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8312AF1F616ED3009269C1 /* GraphInterface.swift */; };
 		9B8361441F59C25A003F700E /* SortingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8361431F59C25A003F700E /* SortingView.swift */; };
 		9B89FF931F6000B800266232 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9C67F21F5FFA0800CC7074 /* GraphViewController.swift */; };
@@ -69,8 +68,6 @@
 		9B996F991F5C550A00DB544B /* SortingInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B996F981F5C550A00DB544B /* SortingInfoView.xib */; };
 		9B996F9B1F5C553300DB544B /* SortingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B996F9A1F5C553300DB544B /* SortingInfoView.swift */; };
 		9B996F9F1F5D5D2000DB544B /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B996F9E1F5D5D2000DB544B /* CodeView.swift */; };
-		9B9C67FA1F5FFC3E00CC7074 /* GraphTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B9C67F91F5FFA7400CC7074 /* GraphTableViewCell.xib */; };
-		9B9C67FB1F5FFCAA00CC7074 /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9C67F81F5FFA7000CC7074 /* GraphTableViewCell.swift */; };
 		9BA0E3491F5DAC800074909C /* SCInsertionSort.c in Resources */ = {isa = PBXBuildFile; fileRef = 9BA0E3471F5DAC2E0074909C /* SCInsertionSort.c */; };
 		9BA0E34E1F5DAE4D0074909C /* SCInsertionSort.swift in Resources */ = {isa = PBXBuildFile; fileRef = 9BA0E34C1F5DAE260074909C /* SCInsertionSort.swift */; };
 		9BA0E3521F5DBEBB0074909C /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA0E3511F5DBEBA0074909C /* DragView.swift */; };
@@ -87,7 +84,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9B6C9B8E1F594FB800F812EB /* PBXContainerItemProxy */ = {
+		9B2ECDFC2178918F00CB1556 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9B6C9B711F594FB700F812EB /* Project object */;
 			proxyType = 1;
@@ -98,7 +95,6 @@
 
 /* Begin PBXFileReference section */
 		4B7024F54584F98FCFF169A2 /* Pods-Algorithms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algorithms.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Algorithms/Pods-Algorithms.debug.xcconfig"; sourceTree = "<group>"; };
-		6A0692A7E4CABCE3F862A256 /* Pods_AlgorithmsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlgorithmsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		834C14D89893B0924981AE20 /* Pods-AlgorithmsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlgorithmsTests/Pods-AlgorithmsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B0E97D11F6026DF00D9B050 /* GraphView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphView.xib; sourceTree = "<group>"; };
 		9B0E97D31F6026F400D9B050 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
@@ -108,6 +104,15 @@
 		9B2143261F617F1D00AEFCB9 /* GraphInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphInfoView.swift; sourceTree = "<group>"; };
 		9B227C141F65646300499D33 /* ChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
 		9B227C161F656BC000499D33 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		9B2ECDF1217876C800CB1556 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		9B2ECDF72178918E00CB1556 /* AlgorithmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B2ECDF92178918F00CB1556 /* AlgorithmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsTests.swift; sourceTree = "<group>"; };
+		9B2ECDFB2178918F00CB1556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B2ECE012178AB7100CB1556 /* BellmanFord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BellmanFord.swift; path = "Algorithms/Graph/Graph Algorithms/SSSP/BellmanFord.swift"; sourceTree = SOURCE_ROOT; };
+		9B2ECE032178AB7800CB1556 /* BFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BFS.swift; path = "Algorithms/Graph/Graph Algorithms/SSSP/BFS.swift"; sourceTree = SOURCE_ROOT; };
+		9B2ECE052178AB7B00CB1556 /* Dijkstra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dijkstra.swift; path = "Algorithms/Graph/Graph Algorithms/SSSP/Dijkstra.swift"; sourceTree = SOURCE_ROOT; };
+		9B2ECE072178AD3100CB1556 /* GraphTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GraphTableViewCell.xib; path = "Algorithms/Graph/TableView Cells/GraphTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		9B2ECE082178AD3200CB1556 /* GraphTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphTableViewCell.swift; path = "Algorithms/Graph/TableView Cells/GraphTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		9B3F5E131F5995BA00A3D84C /* SortingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortingTableViewCell.xib; sourceTree = "<group>"; };
 		9B3F5E151F5996E000A3D84C /* SortingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingTableViewCell.swift; sourceTree = "<group>"; };
 		9B3FA2DD1F5A9D870076106D /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
@@ -122,7 +127,6 @@
 		9B52E6B71F5ED21E00CC630B /* SCMergeSort.java */ = {isa = PBXFileReference; explicitFileType = text; path = SCMergeSort.java; sourceTree = "<group>"; };
 		9B52E6B91F5ED2A300CC630B /* SCHeapSort.java */ = {isa = PBXFileReference; explicitFileType = text; path = SCHeapSort.java; sourceTree = "<group>"; };
 		9B59B46F1F618D1D006843A3 /* GraphSolutionStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphSolutionStep.swift; sourceTree = "<group>"; };
-		9B59B4731F61CCB4006843A3 /* Dijkstra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dijkstra.swift; sourceTree = "<group>"; };
 		9B59B9C01F5E8FA5006524B4 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Languages.swift; path = Sorting/Languages.swift; sourceTree = "<group>"; };
 		9B59B9C31F5E9BC0006524B4 /* SCSelectionSort.swift */ = {isa = PBXFileReference; explicitFileType = text; path = SCSelectionSort.swift; sourceTree = "<group>"; };
 		9B59B9C61F5E9C57006524B4 /* SCSelectionSort.c */ = {isa = PBXFileReference; explicitFileType = text; path = SCSelectionSort.c; sourceTree = "<group>"; };
@@ -132,27 +136,19 @@
 		9B59B9D31F5EB57F006524B4 /* SCQuickSort.c */ = {isa = PBXFileReference; explicitFileType = text; path = SCQuickSort.c; sourceTree = "<group>"; };
 		9B59B9D71F5EB6B2006524B4 /* SCMergeSort.swift */ = {isa = PBXFileReference; explicitFileType = text; path = SCMergeSort.swift; sourceTree = "<group>"; };
 		9B5A1B511F628434002AD785 /* AlgorithmInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmInterface.swift; sourceTree = "<group>"; };
-		9B5A1B531F6402B1002AD785 /* BellmanFord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellmanFord.swift; sourceTree = "<group>"; };
 		9B6C9B791F594FB700F812EB /* Algorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6C9B7C1F594FB700F812EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6C9B811F594FB700F812EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B6C9B831F594FB700F812EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B6C9B861F594FB700F812EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B6C9B881F594FB700F812EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B6C9B8D1F594FB800F812EB /* AlgorithmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B6C9B911F594FB800F812EB /* AlgorithmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsTests.swift; sourceTree = "<group>"; };
-		9B6C9B931F594FB800F812EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B6C9BBC1F59581100F812EB /* Sorting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sorting.storyboard; sourceTree = "<group>"; };
 		9B6C9BBE1F59582000F812EB /* Graph.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Graph.storyboard; sourceTree = "<group>"; };
 		9B6C9BC01F5958EE00F812EB /* GraphTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTableViewController.swift; sourceTree = "<group>"; };
 		9B6C9BC21F5958FF00F812EB /* SortingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingTableViewController.swift; sourceTree = "<group>"; };
-		9B6C9BC41F595A2A00F812EB /* ChildControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildControllerProvider.swift; sourceTree = "<group>"; };
-		9B6C9BC91F595AC600F812EB /* TabBarConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TabBarConfiguration.plist; sourceTree = "<group>"; };
-		9B6C9BCB1F595B0A00F812EB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9B7639621F66900100926C8F /* SCBFS */ = {isa = PBXFileReference; lastKnownFileType = text; path = SCBFS; sourceTree = "<group>"; };
 		9B7639641F66936300926C8F /* SCBellmanFord */ = {isa = PBXFileReference; lastKnownFileType = text; path = SCBellmanFord; sourceTree = "<group>"; };
 		9B7639671F6698B000926C8F /* SCDijkstra */ = {isa = PBXFileReference; lastKnownFileType = text; path = SCDijkstra; sourceTree = "<group>"; };
-		9B8312AD1F616EAD009269C1 /* BFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFS.swift; sourceTree = "<group>"; };
 		9B8312AF1F616ED3009269C1 /* GraphInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphInterface.swift; sourceTree = "<group>"; };
 		9B8361431F59C25A003F700E /* SortingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingView.swift; sourceTree = "<group>"; };
 		9B89FF941F60013200266232 /* SettingsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewDelegate.swift; sourceTree = "<group>"; };
@@ -164,8 +160,6 @@
 		9B996F9A1F5C553300DB544B /* SortingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingInfoView.swift; sourceTree = "<group>"; };
 		9B996F9E1F5D5D2000DB544B /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		9B9C67F21F5FFA0800CC7074 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
-		9B9C67F81F5FFA7000CC7074 /* GraphTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTableViewCell.swift; sourceTree = "<group>"; };
-		9B9C67F91F5FFA7400CC7074 /* GraphTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphTableViewCell.xib; sourceTree = "<group>"; };
 		9BA0E3471F5DAC2E0074909C /* SCInsertionSort.c */ = {isa = PBXFileReference; explicitFileType = text; path = SCInsertionSort.c; sourceTree = "<group>"; };
 		9BA0E34C1F5DAE260074909C /* SCInsertionSort.swift */ = {isa = PBXFileReference; explicitFileType = text; path = SCInsertionSort.swift; sourceTree = "<group>"; };
 		9BA0E3511F5DBEBA0074909C /* DragView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
@@ -185,19 +179,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9B2ECDF42178918E00CB1556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9B6C9B761F594FB700F812EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				499F5055BB9FAA08AD007A31 /* Pods_Algorithms.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9B6C9B8A1F594FB800F812EB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				371CB80BB08C035604D586DA /* Pods_AlgorithmsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				C03F9D7424829753B2FEF31E /* Pods_Algorithms.framework */,
-				6A0692A7E4CABCE3F862A256 /* Pods_AlgorithmsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -249,6 +241,15 @@
 				9B227C161F656BC000499D33 /* ChartView.swift */,
 			);
 			path = ChartView;
+			sourceTree = "<group>";
+		};
+		9B2ECDF82178918F00CB1556 /* AlgorithmsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B2ECDF92178918F00CB1556 /* AlgorithmsTests.swift */,
+				9B2ECDFB2178918F00CB1556 /* Info.plist */,
+			);
+			path = AlgorithmsTests;
 			sourceTree = "<group>";
 		};
 		9B3F5E121F59958C00A3D84C /* TableView Cells */ = {
@@ -297,9 +298,9 @@
 		9B4269181F66E5F00036DBB0 /* SSSP */ = {
 			isa = PBXGroup;
 			children = (
-				9B8312AD1F616EAD009269C1 /* BFS.swift */,
-				9B59B4731F61CCB4006843A3 /* Dijkstra.swift */,
-				9B5A1B531F6402B1002AD785 /* BellmanFord.swift */,
+				9B2ECE052178AB7B00CB1556 /* Dijkstra.swift */,
+				9B2ECE032178AB7800CB1556 /* BFS.swift */,
+				9B2ECE012178AB7100CB1556 /* BellmanFord.swift */,
 			);
 			name = SSSP;
 			path = "New Group";
@@ -370,7 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				9B6C9B7B1F594FB700F812EB /* Algorithms */,
-				9B6C9B901F594FB800F812EB /* AlgorithmsTests */,
+				9B2ECDF82178918F00CB1556 /* AlgorithmsTests */,
 				9B6C9B7A1F594FB700F812EB /* Products */,
 				B71B1361758B0E2788481AE1 /* Pods */,
 				416D4BD9D9BD23D5DABB6D08 /* Frameworks */,
@@ -381,7 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				9B6C9B791F594FB700F812EB /* Algorithms.app */,
-				9B6C9B8D1F594FB800F812EB /* AlgorithmsTests.xctest */,
+				9B2ECDF72178918E00CB1556 /* AlgorithmsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -394,7 +395,7 @@
 				9B6C9B831F594FB700F812EB /* Assets.xcassets */,
 				9B6C9B851F594FB700F812EB /* LaunchScreen.storyboard */,
 				9B6C9B881F594FB700F812EB /* Info.plist */,
-				9B6C9B9D1F59558000F812EB /* Navigation */,
+				9B2ECDF1217876C800CB1556 /* TabBarController.swift */,
 				9B6C9BBA1F5957D600F812EB /* Sorting */,
 				9B6C9BBB1F5957EE00F812EB /* Graph */,
 				9B5B67991F5FFF1F00D73882 /* Shared Views */,
@@ -402,33 +403,6 @@
 				9BE5BB0E1F59782300918A17 /* Small Stuff */,
 			);
 			path = Algorithms;
-			sourceTree = "<group>";
-		};
-		9B6C9B901F594FB800F812EB /* AlgorithmsTests */ = {
-			isa = PBXGroup;
-			children = (
-				9B6C9B911F594FB800F812EB /* AlgorithmsTests.swift */,
-				9B6C9B931F594FB800F812EB /* Info.plist */,
-			);
-			path = AlgorithmsTests;
-			sourceTree = "<group>";
-		};
-		9B6C9B9D1F59558000F812EB /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				9B6C9B9E1F59558D00F812EB /* TabBar Navigation */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		9B6C9B9E1F59558D00F812EB /* TabBar Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				9B6C9BC91F595AC600F812EB /* TabBarConfiguration.plist */,
-				9B6C9BC41F595A2A00F812EB /* ChildControllerProvider.swift */,
-				9B6C9BCB1F595B0A00F812EB /* TabBarController.swift */,
-			);
-			path = "TabBar Navigation";
 			sourceTree = "<group>";
 		};
 		9B6C9BBA1F5957D600F812EB /* Sorting */ = {
@@ -500,8 +474,8 @@
 		9B9C67F31F5FFA1B00CC7074 /* TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9B9C67F91F5FFA7400CC7074 /* GraphTableViewCell.xib */,
-				9B9C67F81F5FFA7000CC7074 /* GraphTableViewCell.swift */,
+				9B2ECE082178AD3200CB1556 /* GraphTableViewCell.swift */,
+				9B2ECE072178AD3100CB1556 /* GraphTableViewCell.xib */,
 			);
 			name = "TableView Cells";
 			path = "New Group";
@@ -581,6 +555,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9B2ECDF62178918E00CB1556 /* AlgorithmsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B2ECDFE2178918F00CB1556 /* Build configuration list for PBXNativeTarget "AlgorithmsTests" */;
+			buildPhases = (
+				9B2ECDF32178918E00CB1556 /* Sources */,
+				9B2ECDF42178918E00CB1556 /* Frameworks */,
+				9B2ECDF52178918E00CB1556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B2ECDFD2178918F00CB1556 /* PBXTargetDependency */,
+			);
+			name = AlgorithmsTests;
+			productName = AlgorithmsTests;
+			productReference = 9B2ECDF72178918E00CB1556 /* AlgorithmsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9B6C9B781F594FB700F812EB /* Algorithms */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B6C9B961F594FB800F812EB /* Build configuration list for PBXNativeTarget "Algorithms" */;
@@ -601,43 +593,24 @@
 			productReference = 9B6C9B791F594FB700F812EB /* Algorithms.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9B6C9B8C1F594FB800F812EB /* AlgorithmsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9B6C9B991F594FB800F812EB /* Build configuration list for PBXNativeTarget "AlgorithmsTests" */;
-			buildPhases = (
-				2E6BEFF5F4968CF450918693 /* [CP] Check Pods Manifest.lock */,
-				9B6C9B891F594FB800F812EB /* Sources */,
-				9B6C9B8A1F594FB800F812EB /* Frameworks */,
-				9B6C9B8B1F594FB800F812EB /* Resources */,
-				CF8CE99A09BEAFE12D1705BA /* [CP] Embed Pods Frameworks */,
-				993755FF68EFD49BFA110CDB /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9B6C9B8F1F594FB800F812EB /* PBXTargetDependency */,
-			);
-			name = AlgorithmsTests;
-			productName = AlgorithmsTests;
-			productReference = 9B6C9B8D1F594FB800F812EB /* AlgorithmsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9B6C9B711F594FB700F812EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Florian Kasten";
 				TargetAttributes = {
+					9B2ECDF62178918E00CB1556 = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9B6C9B781F594FB700F812EB;
+					};
 					9B6C9B781F594FB700F812EB = {
 						CreatedOnToolsVersion = 9.0;
-					};
-					9B6C9B8C1F594FB800F812EB = {
-						CreatedOnToolsVersion = 9.0;
-						TestTargetID = 9B6C9B781F594FB700F812EB;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -655,12 +628,19 @@
 			projectRoot = "";
 			targets = (
 				9B6C9B781F594FB700F812EB /* Algorithms */,
-				9B6C9B8C1F594FB800F812EB /* AlgorithmsTests */,
+				9B2ECDF62178918E00CB1556 /* AlgorithmsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9B2ECDF52178918E00CB1556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9B6C9B771F594FB700F812EB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -674,7 +654,6 @@
 				9B6C9BBF1F59582000F812EB /* Graph.storyboard in Resources */,
 				9B996F991F5C550A00DB544B /* SortingInfoView.xib in Resources */,
 				9B6C9B821F594FB700F812EB /* Main.storyboard in Resources */,
-				9B6C9BCA1F595AC600F812EB /* TabBarConfiguration.plist in Resources */,
 				9BB5B7441F5D809400975E1D /* LanguageSyntax.plist in Resources */,
 				9BA0E34E1F5DAE4D0074909C /* SCInsertionSort.swift in Resources */,
 				9BA0E3491F5DAC800074909C /* SCInsertionSort.c in Resources */,
@@ -692,6 +671,7 @@
 				9B52E6A41F5EBDC200CC630B /* SCMergeSort.swift in Resources */,
 				9B52E6A51F5EBDC400CC630B /* SCMergeSort.c in Resources */,
 				9B52E6BD1F5ED42600CC630B /* SCMergeSort.java in Resources */,
+				9B2ECE092178AD3200CB1556 /* GraphTableViewCell.xib in Resources */,
 				9B52E6AB1F5EC05A00CC630B /* SCHeapSort.swift in Resources */,
 				9B2143251F617E7200AEFCB9 /* GraphInfoView.xib in Resources */,
 				9B52E6AC1F5EC05C00CC630B /* SCHeapSort.c in Resources */,
@@ -699,38 +679,12 @@
 				9BC89ED31F59AAE200450DE9 /* SettingsView.xib in Resources */,
 				9B6C9BBD1F59581100F812EB /* Sorting.storyboard in Resources */,
 				9B3F5E141F5995BB00A3D84C /* SortingTableViewCell.xib in Resources */,
-				9B9C67FA1F5FFC3E00CC7074 /* GraphTableViewCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9B6C9B8B1F594FB800F812EB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E6BEFF5F4968CF450918693 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AlgorithmsTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		95596CC9E825E721FDDD9BA8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -744,21 +698,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Algorithms/Pods-Algorithms-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		993755FF68EFD49BFA110CDB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlgorithmsTests/Pods-AlgorithmsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B312657134A05D36874494AE /* [CP] Check Pods Manifest.lock */ = {
@@ -797,24 +736,17 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Algorithms/Pods-Algorithms-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF8CE99A09BEAFE12D1705BA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlgorithmsTests/Pods-AlgorithmsTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9B2ECDF32178918E00CB1556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B2ECDFA2178918F00CB1556 /* AlgorithmsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9B6C9B751F594FB700F812EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -823,22 +755,20 @@
 				9B0E97D81F6047BC00D9B050 /* Graph.swift in Sources */,
 				9BE5BB1A1F597B9000918A17 /* InsertionSort.swift in Sources */,
 				9B59B9C11F5E8FA5006524B4 /* Languages.swift in Sources */,
-				9B6C9BC51F595A2A00F812EB /* ChildControllerProvider.swift in Sources */,
-				9B59B4741F61CCB4006843A3 /* Dijkstra.swift in Sources */,
 				9B8361441F59C25A003F700E /* SortingView.swift in Sources */,
+				9B2ECE062178AB7C00CB1556 /* Dijkstra.swift in Sources */,
 				9BA0E3521F5DBEBB0074909C /* DragView.swift in Sources */,
 				9B2143271F617F1D00AEFCB9 /* GraphInfoView.swift in Sources */,
 				9B0E97D41F6026F400D9B050 /* GraphView.swift in Sources */,
+				9B2ECE042178AB7800CB1556 /* BFS.swift in Sources */,
 				9B5A1B521F628434002AD785 /* AlgorithmInterface.swift in Sources */,
 				9B3FA2E01F5AA2380076106D /* MergeSort.swift in Sources */,
-				9B6C9BCC1F595B0A00F812EB /* TabBarController.swift in Sources */,
+				9B2ECE0A2178AD3200CB1556 /* GraphTableViewCell.swift in Sources */,
 				9B94C1911F5C0FEA0031E622 /* NumberOrder.swift in Sources */,
 				9BB5B73E1F5D664100975E1D /* SyntaxHighlightTextStorage.swift in Sources */,
 				9BE5BB101F59784500918A17 /* UIImageExtension.swift in Sources */,
 				9BE5BB1C1F597D2500918A17 /* SelectionSort.swift in Sources */,
 				9BC89ECB1F599F3900450DE9 /* SortingViewController.swift in Sources */,
-				9B5A1B541F6402B1002AD785 /* BellmanFord.swift in Sources */,
-				9B8312AE1F616EAD009269C1 /* BFS.swift in Sources */,
 				9B227C171F656BC000499D33 /* ChartView.swift in Sources */,
 				9B89FF931F6000B800266232 /* GraphViewController.swift in Sources */,
 				9BB5B7461F5D838E00975E1D /* UIColorExtension.swift in Sources */,
@@ -850,6 +780,7 @@
 				9B6C9B7D1F594FB700F812EB /* AppDelegate.swift in Sources */,
 				9B59B4701F618D1D006843A3 /* GraphSolutionStep.swift in Sources */,
 				9B6C9BC31F5958FF00F812EB /* SortingTableViewController.swift in Sources */,
+				9B2ECDF2217876C900CB1556 /* TabBarController.swift in Sources */,
 				9B996F9F1F5D5D2000DB544B /* CodeView.swift in Sources */,
 				9BE5BB161F597A9600918A17 /* SortInterface.swift in Sources */,
 				9B0E97D61F6027FE00D9B050 /* VerticeView.swift in Sources */,
@@ -857,25 +788,17 @@
 				9BC89ED11F59AAB600450DE9 /* SettingsView.swift in Sources */,
 				9B3FA2DE1F5A9D870076106D /* QuickSort.swift in Sources */,
 				9B94C1971F5C48ED0031E622 /* HeapSort.swift in Sources */,
-				9B9C67FB1F5FFCAA00CC7074 /* GraphTableViewCell.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9B6C9B891F594FB800F812EB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B6C9B921F594FB800F812EB /* AlgorithmsTests.swift in Sources */,
+				9B2ECE022178AB7100CB1556 /* BellmanFord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9B6C9B8F1F594FB800F812EB /* PBXTargetDependency */ = {
+		9B2ECDFD2178918F00CB1556 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9B6C9B781F594FB700F812EB /* Algorithms */;
-			targetProxy = 9B6C9B8E1F594FB800F812EB /* PBXContainerItemProxy */;
+			targetProxy = 9B2ECDFC2178918F00CB1556 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -899,6 +822,45 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9B2ECDFF2178918F00CB1556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69656Z3792;
+				INFOPLIST_FILE = AlgorithmsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = flokka.AlgorithmsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Algorithms.app/Algorithms";
+			};
+			name = Debug;
+		};
+		9B2ECE002178918F00CB1556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69656Z3792;
+				INFOPLIST_FILE = AlgorithmsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = flokka.AlgorithmsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Algorithms.app/Algorithms";
+			};
+			name = Release;
+		};
 		9B6C9B941F594FB800F812EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -913,6 +875,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -920,6 +883,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -970,6 +934,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -977,6 +942,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1011,13 +977,13 @@
 			baseConfigurationReference = 4B7024F54584F98FCFF169A2 /* Pods-Algorithms.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GK3RQHFJHZ;
+				DEVELOPMENT_TEAM = 69656Z3792;
 				INFOPLIST_FILE = Algorithms/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flokka.Algorithms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1027,54 +993,29 @@
 			baseConfigurationReference = A1393224ED621E8EB41D0C5B /* Pods-Algorithms.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GK3RQHFJHZ;
+				DEVELOPMENT_TEAM = 69656Z3792;
 				INFOPLIST_FILE = Algorithms/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flokka.Algorithms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		9B6C9B9A1F594FB800F812EB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 834C14D89893B0924981AE20 /* Pods-AlgorithmsTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = GK3RQHFJHZ;
-				INFOPLIST_FILE = AlgorithmsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.flokka.AlgorithmsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Algorithms.app/Algorithms";
-			};
-			name = Debug;
-		};
-		9B6C9B9B1F594FB800F812EB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2AE21D9CEBF31A26F4C522F /* Pods-AlgorithmsTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = GK3RQHFJHZ;
-				INFOPLIST_FILE = AlgorithmsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.flokka.AlgorithmsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Algorithms.app/Algorithms";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9B2ECDFE2178918F00CB1556 /* Build configuration list for PBXNativeTarget "AlgorithmsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B2ECDFF2178918F00CB1556 /* Debug */,
+				9B2ECE002178918F00CB1556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9B6C9B741F594FB700F812EB /* Build configuration list for PBXProject "Algorithms" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1089,15 +1030,6 @@
 			buildConfigurations = (
 				9B6C9B971F594FB800F812EB /* Debug */,
 				9B6C9B981F594FB800F812EB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9B6C9B991F594FB800F812EB /* Build configuration list for PBXNativeTarget "AlgorithmsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9B6C9B9A1F594FB800F812EB /* Debug */,
-				9B6C9B9B1F594FB800F812EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,22 +9,11 @@
 import UIKit
 
 class GraphView: UIView {
-    
-    @IBOutlet var contentView: UIView!
-    @IBOutlet var verticeViews: [VerticeView]!
-    @IBOutlet weak var negativeWeightCycleLabel: UILabel!
-    
+
     public var chartView: ChartView!
     public var solutionSteps: [GraphSolutionStep]!
     public var hideEdgeLabels = false
-    
-    private var edgesLabels: [UILabel] = []
-    private var selectedEdges: [(Int, Int)] = []
-    private var currentEdge: Int?
-    private var verticesConnectors: [(VerticeView, VerticeView)]?
-    private var lastCurrentVertice: Int?
-    private var timer: Timer?
-    
+
     public var startNode: Int = 0 {
         willSet { verticeViews[startNode].resetIsStart() }
         didSet {
@@ -33,7 +22,7 @@ class GraphView: UIView {
             timer?.invalidate()
         }
     }
-    
+
     public var graph: Graph! {
         didSet {
             setupVerticesConnectors()
@@ -46,36 +35,47 @@ class GraphView: UIView {
             layoutIfNeeded()
         }
     }
-    
+
+    private var edgesLabels: [UILabel] = []
+    private var selectedEdges: [(Int, Int)] = []
+    private var currentEdge: Int?
+    private var verticesConnectors: [(VerticeView, VerticeView)]?
+    private var lastCurrentVertice: Int?
+    private var timer: Timer?
+
+    @IBOutlet var contentView: UIView!
+    @IBOutlet var verticeViews: [VerticeView]!
+    @IBOutlet weak var negativeWeightCycleLabel: UILabel!
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         initSelf()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initSelf()
     }
-    
+
     private func initSelf() {
         Bundle.main.loadNibNamed("GraphView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
-    
+
     private func setupVerticesConnectors() {
-        verticesConnectors = (0..<verticeViews.count).flatMap({ i in
-            graph.getNeighbors(forVertice: i).map({ j in
+        verticesConnectors = (0..<verticeViews.count).flatMap { i in
+            graph.getNeighbors(forVertice: i).map { j in
                 (verticeViews[i], verticeViews[j])
-            })
-        })
+            }
+        }
     }
-    
+
     private func setupEdgeLabels() {
-        edgesLabels.forEach( { $0.removeFromSuperview() })
+        edgesLabels.forEach { $0.removeFromSuperview() }
         edgesLabels = []
-        for _ in 0..<graph.edgesCount{
+        (0..<graph.edgesCount).forEach { _ in
             let label = UILabel(frame: CGRect(x: 0, y: 0, width: 15, height: 15))
             label.textAlignment = .center
             label.font = label.font.withSize(12)
@@ -83,7 +83,7 @@ class GraphView: UIView {
             edgesLabels.append(label)
         }
     }
-    
+
     override func draw(_ rect: CGRect) {
         guard let verticesConnectors = verticesConnectors else {
             return
@@ -97,42 +97,41 @@ class GraphView: UIView {
             let r = vc.0.frame.size.width / 2
             let x: CGFloat = a * r / c
             let y: CGFloat = b * r / c
-            
+
             //connect
             let path = UIBezierPath()
             path.move(to: CGPoint(x: vc.0.center.x + x, y: vc.0.center.y + y))
             let dest = CGPoint(x: vc.1.center.x - x, y: vc.1.center.y - y)
             path.addLine(to: dest)
-            
+
             //draw arrow
             let start: CGPoint = CGPoint(x: dest.x - x / 2, y: dest.y - y / 2)
-            let v: CGPoint = CGPoint(x: dest.x - start.x, y : dest.y - start.y)
+            let v: CGPoint = CGPoint(x: dest.x - start.x, y: dest.y - start.y)
             let p = sqrt(v.x * v.x + v.y * v.y)
             let h = r / 4
             path.move(to: dest)
             path.addLine(to: CGPoint(x: start.x + -v.y / p * h, y: start.y + v.x / p * h))
             path.move(to: dest)
             path.addLine(to: CGPoint(x: start.x + -v.y / p * -h, y: start.y + v.x / p * -h))
-            
+
             path.close()
             currentEdge != nil && i == currentEdge ? UIColor.red.set() : UIColor.black.set()
             path.stroke()
             i += 1
         }
     }
-    
-    
+
     private func updateEdgeLabelPositions() {
         guard !edgesLabels.isEmpty else {
             return
         }
-        var i: Int = 0
+        var i = 0
         for v in graph.getNodes() {
             for w in graph.getNeighbors(forVertice: v) {
                 let start = verticeViews[v].center
                 let end = verticeViews[w].center
                 let middle = CGPoint(x: start.x + (end.x - start.x) / 2, y: start.y + (end.y - start.y) / 2)
-                let v: CGPoint = CGPoint(x: middle.x - start.x, y : middle.y - start.y)
+                let v: CGPoint = CGPoint(x: middle.x - start.x, y: middle.y - start.y)
                 let p = sqrt(v.x * v.x + v.y * v.y)
                 let h: CGFloat = 10
                 let labelCenter = CGPoint(x: middle.x + -v.y / p * -h, y: middle.y + v.x / p * -h)
@@ -141,12 +140,12 @@ class GraphView: UIView {
             }
         }
     }
-    
+
     private func updateWeights() {
         guard !edgesLabels.isEmpty else {
             return
         }
-        var i: Int = 0
+        var i = 0
         for v in graph.getNodes() {
             for w in graph.getNeighbors(forVertice: v) {
                 let weight = graph.getWeight(v, w)!
@@ -155,7 +154,7 @@ class GraphView: UIView {
             }
         }
     }
-    
+
     private func resetGraph() {
         verticeViews.forEach {
             $0.verticeState = .unvisited
@@ -167,10 +166,14 @@ class GraphView: UIView {
         }
         chartView.resetTable()
     }
-    
+
     public func animateAlgorithm(stepByStep: Bool) {
         timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: !stepByStep, block: { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: !stepByStep, block: { [weak self] timer in
+            guard let self = self else {
+                timer.invalidate()
+                return
+            }
             guard !self.solutionSteps.isEmpty else {
                 if let lastCurrentVertice = self.lastCurrentVertice {
                     self.verticeViews[lastCurrentVertice].verticeState = .visited
@@ -200,12 +203,12 @@ class GraphView: UIView {
             self.setNeedsDisplay()
         })
     }
-    
+
     private func updateAlpha() {
         let verticeViewHeight = verticeViews[0].frame.height
         alpha = (frame.height - verticeViewHeight / 2) / verticeViewHeight / 4
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = bounds

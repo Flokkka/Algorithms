@@ -9,15 +9,15 @@
 import Foundation
 
 struct InsertionSort: SortInterface {
-    
-    public var name: String = "Insertion sort"
-    public var worstCase: String = "O(n\u{00B2})"
-    public var averageCase: String = "O(n\u{00B2})"
-    public var bestCase: String = "O(n)"
-    public var memory: String = "O(1)"
-    public var stable: Bool = true
-    public var method: String = "Insertion"
-    
+
+    public var name = "Insertion sort"
+    public var worstCase = "O(n\u{00B2})"
+    public var averageCase = "O(n\u{00B2})"
+    public var bestCase = "O(n)"
+    public var memory = "O(1)"
+    public var stable = true
+    public var method = "Insertion"
+
     public func sort(_ a: inout [Int]) -> [SortSolutionStep] {
         var steps: [SortSolutionStep] = []
         var i = 1
@@ -36,5 +36,4 @@ struct InsertionSort: SortInterface {
         }
         return steps
     }
-    
 }

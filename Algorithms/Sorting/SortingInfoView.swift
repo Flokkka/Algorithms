@@ -9,7 +9,7 @@
 import UIKit
 
 class SortingInfoView: UIView {
-    
+
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var algorithmNameLabel: UILabel!
     @IBOutlet weak var bestCaseLabel: UILabel!
@@ -18,30 +18,22 @@ class SortingInfoView: UIView {
     @IBOutlet weak var memoryLabel: UILabel!
     @IBOutlet weak var stableLabel: UILabel!
     @IBOutlet weak var methodLabel: UILabel!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        initSelf()
-    }
-    
-    init(frame: CGRect, algorithm: SortInterface) {
-        super.init(frame: frame)
+
+    convenience init(frame: CGRect, algorithm: SortInterface) {
+        self.init(frame: frame)
         initSelf()
         setupAlgorithmInfo(algorithm)
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        initSelf()
-    }
-    
+
     private func initSelf() {
         Bundle.main.loadNibNamed("SortingInfoView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        clipsToBounds = true
+        layer.cornerRadius = 20
     }
-    
+
     private func setupAlgorithmInfo(_ algorithm: SortInterface) {
         algorithmNameLabel.text = algorithm.name
         bestCaseLabel.text = algorithm.bestCase

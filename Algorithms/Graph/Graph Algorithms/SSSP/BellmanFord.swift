@@ -9,22 +9,22 @@
 import Foundation
 
 struct BellmanFord: GraphInterface {
-    
-    public var name: String = "Bellman-Ford"
-    public var worstCasePerformance: String = "Θ(|V||E|)"
-    public var limitations: String = "None."
-    
+
+    public var name = "Bellman-Ford"
+    public var worstCasePerformance = "Θ(|V||E|)"
+    public var limitations = "None."
+
     public func go(start: Int, graph: Graph) -> [GraphSolutionStep] {
         var solutionSteps: [GraphSolutionStep] = []
         _ = bellmanFord(start: start, graph: graph, solutionSteps: &solutionSteps)
         return solutionSteps
     }
-    
+
     public func bellmanFord(start: Int, graph: Graph, solutionSteps: inout [GraphSolutionStep]) -> ([Int], [Int]) {
         var dist = [Int](repeatElement(Int.max, count: graph.verticesCount))
         var pred = [Int](repeatElement(-1, count: graph.verticesCount))
         dist[start] = 0
-        
+
         for _ in 0..<graph.verticesCount {
             var i = 0
             for u in graph.getNodes() {

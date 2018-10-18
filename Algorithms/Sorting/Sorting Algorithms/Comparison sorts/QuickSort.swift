@@ -9,21 +9,21 @@
 import Foundation
 
 struct QuickSort: SortInterface {
-    
-    public var name: String = "Quicksort"
-    public var worstCase: String = "O(n\u{00B2})"
-    public var averageCase: String = "O(n log n)"
-    public var bestCase: String = "O(n log n)"
-    public var memory: String = "average-case: O(log n)\nworst-case: O(n)"
-    public var stable: Bool = false
-    public var method: String = "Partitioning"
-    
+
+    public var name = "Quicksort"
+    public var worstCase = "O(n\u{00B2})"
+    public var averageCase = "O(n log n)"
+    public var bestCase = "O(n log n)"
+    public var memory = "average-case: O(log n)\nworst-case: O(n)"
+    public var stable = false
+    public var method = "Partitioning"
+
     public func sort(_ a: inout [Int]) -> [SortSolutionStep] {
         var steps: [SortSolutionStep] = []
         quickSort(a: &a, l: 0, r: a.count - 1, steps: &steps)
         return steps
     }
-    
+
     private func quickSort(a: inout [Int], l: Int, r: Int, steps: inout [SortSolutionStep]) {
         if l < r {
             let p = a[r] //choose the most right element as pivot
@@ -56,6 +56,4 @@ struct QuickSort: SortInterface {
             quickSort(a: &a, l: i+1, r: r, steps: &steps)
         }
     }
-    
-    
 }

@@ -13,14 +13,14 @@ enum Languages: Int {
     case java
     case c
     case pseudo
-    
+
     public static let mapper: [Languages: String] = [
         .swift: "Swift",
         .java: "Java",
         .c: "C",
         .pseudo: "Pseudocode"
     ]
-    
+
     public var string: String {
         return Languages.mapper[self]!
     }

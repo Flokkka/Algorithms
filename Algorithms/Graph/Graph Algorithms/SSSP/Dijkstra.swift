@@ -9,17 +9,17 @@
 import Foundation
 
 struct Dijkstra: GraphInterface {
-    
-    public var name: String = "Dijkstra"
-    public var worstCasePerformance: String = "O(|E|+|V|log|V|)"
-    public var limitations: String = "All weights must be positive."
-    
+
+    public var name = "Dijkstra"
+    public var worstCasePerformance = "O(|E|+|V|log|V|)"
+    public var limitations = "All weights must be positive."
+
     public func go(start: Int, graph: Graph) -> [GraphSolutionStep] {
         var solutionSteps: [GraphSolutionStep] = []
         _ = dijkstra(start: start, graph: graph, solutionSteps: &solutionSteps)
         return solutionSteps
     }
-    
+
     public func dijkstra(start: Int, graph: Graph, solutionSteps: inout [GraphSolutionStep]) -> ([Int], [Int]) {
         var q: [Int] = graph.getNodes()
         var dist = [Int](repeatElement(Int.max, count: graph.verticesCount))
@@ -28,11 +28,9 @@ struct Dijkstra: GraphInterface {
         while q.count > 0 {
             var uIndex = 0
             var min = dist[q[uIndex]]
-            for i in 0..<q.count {
-                if dist[q[i]] < min {
-                    min = dist[q[i]]
-                    uIndex = i
-                }
+            for i in 0..<q.count where dist[q[i]] < min {
+                min = dist[q[i]]
+                uIndex = i
             }
             if min == Int.max {
                 break

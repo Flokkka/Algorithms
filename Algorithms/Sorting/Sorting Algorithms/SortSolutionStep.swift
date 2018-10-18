@@ -13,10 +13,10 @@ struct SortSolutionStep {
         case step
         case indices
     }
-    
+
     public let element: [Int]
     public let type: SSType
-    
+
     init(_ element: [Int], _ type: SSType) {
         self.element = element
         self.type = type

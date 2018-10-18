@@ -16,19 +16,19 @@ enum VerticeState {
 }
 
 @IBDesignable class VerticeView: UIView {
-    
+
     private var smallLabel: UILabel!
     private var label: UILabel!
     private var isShowingBothLabels = false
-    
-    public var verticeState: VerticeState! {
+
+    public var verticeState: VerticeState = .unvisited {
         didSet { backgroundColor = getBackgroundColorForCurrentState() }
     }
-    
+
     @IBInspectable public var name: String! {
         didSet { label.text = name }
     }
-    
+
     @IBInspectable public var nameSmall: String! {
         didSet {
             smallLabel.text = nameSmall
@@ -37,17 +37,17 @@ enum VerticeState {
             layoutIfNeeded()
         }
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         initSelf()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initSelf()
     }
-    
+
     private func initSelf() {
         layer.masksToBounds = true
         label = UILabel()
@@ -55,41 +55,40 @@ enum VerticeState {
         label.textColor = UIColor.white
         addSubview(label)
         verticeState = .unvisited
-        
+
         smallLabel = UILabel()
         smallLabel.textColor = UIColor.white
         smallLabel.font = smallLabel.font.withSize(10)
         smallLabel.textAlignment = .center
         addSubview(smallLabel)
     }
-    
+
     private func getBackgroundColorForCurrentState() -> UIColor {
         switch verticeState {
-            case .unvisited: return UIColor.blue
-            case .visited: return UIColor(rgb: 0x008000)
-            case .current: return UIColor.red
-            case .aboutToVisit: return UIColor.orange
-            default: return UIColor.black
+        case .unvisited: return UIColor.blue
+        case .visited: return UIColor(rgb: 0x008000)
+        case .current: return UIColor.red
+        case .aboutToVisit: return UIColor.orange
         }
     }
-    
+
     public func setIsStart() {
-       drawBorder(color: UIColor.purple)
+        drawBorder(color: UIColor.purple)
     }
-    
+
     public func setIsEnd() {
         drawBorder(color: UIColor.black)
     }
-    
+
     public func resetIsStart() {
         layer.borderWidth = 0
     }
-    
+
     private func drawBorder(color: UIColor) {
         layer.borderWidth = 2
         layer.borderColor = color.cgColor
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = bounds.size.width / 2

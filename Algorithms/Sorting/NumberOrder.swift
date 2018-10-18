@@ -8,17 +8,17 @@
 
 import Foundation
 
-enum NumberOrder: Int {
+enum NumberOrder: Int, CaseIterable {
     case random
     case sortedUp
     case sortedDown
-    
+
     public static let mapper: [NumberOrder: String] = [
         .random: "random",
         .sortedUp: "sorted (<)",
         .sortedDown: "sorted (>)"
     ]
-    
+
     public var string: String {
         return NumberOrder.mapper[self]!
     }

@@ -9,14 +9,14 @@
 import Foundation
 
 struct GraphSolutionStep {
-    
+
     public let dist: [Int]
     public let pred: [Int]
     public let successors: [Int]
     public let vertice: Int?
     public let edge: Int?
     public let negativeWeightCycle: Bool
-    
+
     init(dist: [Int], pred: [Int], successors: [Int] = [], vertice: Int? = nil, edge: Int? = nil, negativeWeightCycle: Bool = false) {
         self.dist = dist
         self.pred = pred

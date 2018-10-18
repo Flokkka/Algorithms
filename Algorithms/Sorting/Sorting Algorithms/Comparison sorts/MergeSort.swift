@@ -9,21 +9,21 @@
 import Foundation
 
 struct MergeSort: SortInterface {
-    
-    public var name: String = "Merge sort"
-    public var worstCase: String = "O(n log n)"
-    public var averageCase: String = "O(n log n)"
-    public var bestCase: String = "O(n log n)"
-    public var memory: String = "O(n)"
-    public var stable: Bool = true
-    public var method: String = "Merging"
-    
+
+    public var name = "Merge sort"
+    public var worstCase = "O(n log n)"
+    public var averageCase = "O(n log n)"
+    public var bestCase = "O(n log n)"
+    public var memory = "O(n)"
+    public var stable = true
+    public var method = "Merging"
+
     public func sort(_ a: inout [Int]) -> [SortSolutionStep] {
         var steps: [SortSolutionStep] = []
         mergeSort(a: &a, l: 0, r: a.count - 1, steps: &steps)
         return steps
     }
-    
+
     private func mergeSort(a: inout [Int], l: Int, r: Int, steps: inout [SortSolutionStep]) {
         if l >= r {
             return
@@ -39,17 +39,14 @@ struct MergeSort: SortInterface {
             if j > m {
                 b[i] = a[k]
                 k += 1
-            }
-            else if k > r {
+            } else if k > r {
                 b[i] = a[j]
                 j += 1
-            }
-            else {
+            } else {
                 if a[j] <= a[k] {
                     b[i] = a[j]
                     j += 1
-                }
-                else {
+                } else {
                     b[i] = a[k]
                     k += 1
                 }
@@ -60,6 +57,4 @@ struct MergeSort: SortInterface {
             steps.append(SortSolutionStep(a, .step))
         }
     }
-    
-    
 }

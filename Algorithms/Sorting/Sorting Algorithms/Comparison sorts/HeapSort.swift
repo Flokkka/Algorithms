@@ -9,15 +9,15 @@
 import Foundation
 
 struct HeapSort: SortInterface {
-    
-    public var name: String = "Heapsort"
-    public var worstCase: String = "O(n log n)"
-    public var averageCase: String = "O(n log n)"
-    public var bestCase: String = "O(n log n)"
-    public var memory: String = "O(1)"
-    public var stable: Bool = false
-    public var method: String = "Selection"
-    
+
+    public var name = "Heapsort"
+    public var worstCase = "O(n log n)"
+    public var averageCase = "O(n log n)"
+    public var bestCase = "O(n log n)"
+    public var memory = "O(1)"
+    public var stable = false
+    public var method = "Selection"
+
     public func sort(_ a: inout [Int]) -> [SortSolutionStep] {
         var steps: [SortSolutionStep] = []
         var i: Int = a.count / 2 - 1
@@ -38,7 +38,7 @@ struct HeapSort: SortInterface {
         }
         return steps
     }
-    
+
     private func heapify(a: inout [Int], n: Int, i: Int, steps: inout [SortSolutionStep]) {
         var largest = i
         let l = 2 * i + 1
@@ -57,5 +57,4 @@ struct HeapSort: SortInterface {
             heapify(a: &a, n: n, i: largest, steps: &steps)
         }
     }
-    
 }

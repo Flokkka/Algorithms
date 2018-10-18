@@ -13,7 +13,7 @@ func sort(_ a: inout [Int]) {
         i -= 1
     }
 }
-  
+
 func heapify(a: inout [Int], n: Int, i: Int) {
     var largest = i
     let l = 2 * i + 1

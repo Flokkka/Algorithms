@@ -9,9 +9,9 @@
 import Foundation
 
 protocol GraphInterface: AlgorithmInterface {
-    
+
     var worstCasePerformance: String { get }
     var limitations: String { get }
-    
+
     func go(start: Int, graph: Graph) -> [GraphSolutionStep]
 }

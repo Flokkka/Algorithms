@@ -9,15 +9,15 @@
 import Foundation
 
 struct SelectionSort: SortInterface {
-    
-    public var name: String = "Selection sort"
-    public var worstCase: String = "O(n\u{00B2})"
-    public var averageCase: String = "O(n\u{00B2})"
-    public var bestCase: String = "O(n\u{00B2})"
-    public var memory: String = "O(1)"
-    public var stable: Bool = false
-    public var method: String = "Selection"
-    
+
+    public var name = "Selection sort"
+    public var worstCase = "O(n\u{00B2})"
+    public var averageCase = "O(n\u{00B2})"
+    public var bestCase = "O(n\u{00B2})"
+    public var memory = "O(1)"
+    public var stable = false
+    public var method = "Selection"
+
     public func sort(_ a: inout [Int]) -> [SortSolutionStep] {
         var steps: [SortSolutionStep] = []
         for j in 0..<a.count {
@@ -29,7 +29,7 @@ struct SelectionSort: SortInterface {
                 }
                 steps.append(SortSolutionStep([j, i], .indices))
             }
-            if (iMin != j) {
+            if iMin != j {
                 let tempAJ = a[j]
                 a[j] = a[iMin]
                 a[iMin] = tempAJ
@@ -38,6 +38,4 @@ struct SelectionSort: SortInterface {
         }
         return steps
     }
-    
-    
 }

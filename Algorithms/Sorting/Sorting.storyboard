@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1sa-Cw-6bJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1sa-Cw-6bJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Sorting-->
         <scene sceneID="XJi-CE-aqU">
             <objects>
                 <navigationController id="1sa-Cw-6bJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sorting" image="first" id="fgA-fV-rgs"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UWM-Jz-AuQ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -26,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="-1245" y="-310"/>
         </scene>
-        <!--Sorting Table View Controller-->
+        <!--Sorting-->
         <scene sceneID="tlp-3K-W0f">
             <objects>
                 <tableViewController id="RCE-fU-ReR" customClass="SortingTableViewController" customModule="Algorithms" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,7 +57,7 @@
                             <outlet property="delegate" destination="RCE-fU-ReR" id="8pJ-92-fLn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="e6w-f8-wTW"/>
+                    <navigationItem key="navigationItem" title="Sorting" id="e6w-f8-wTW"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpe-AL-sEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,16 +72,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LsJ-n0-9Ck" customClass="SettingsView" customModule="Algorithms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                                <rect key="frame" x="10" y="74" width="355" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="pMv-67-IAc"/>
+                                    <constraint firstAttribute="height" constant="70" id="pMv-67-IAc"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-5v-S8M" customClass="SortingView" customModule="Algorithms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="124" width="375" height="322"/>
+                                <rect key="frame" x="0.0" y="154" width="375" height="243"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1A-Cq-XpD" customClass="DragView" customModule="Algorithms" customModuleProvider="target">
-                                <rect key="frame" x="157.5" y="447" width="60" height="20"/>
+                                <rect key="frame" x="157.5" y="398" width="60" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Q1A-Cq-XpD" secondAttribute="height" multiplier="3:1" id="i0F-M1-z2e"/>
@@ -87,15 +89,15 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OfC-zV-ZAI" customClass="CodeView" customModule="Algorithms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="466" width="375" height="201"/>
+                                <rect key="frame" x="0.0" y="417" width="375" height="201"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fpC-5v-S8M" firstAttribute="top" secondItem="LsJ-n0-9Ck" secondAttribute="bottom" id="9JI-MJ-9L9"/>
-                            <constraint firstItem="LsJ-n0-9Ck" firstAttribute="top" secondItem="lm4-vV-KT2" secondAttribute="top" id="9T1-2I-2ca"/>
-                            <constraint firstItem="lm4-vV-KT2" firstAttribute="trailing" secondItem="LsJ-n0-9Ck" secondAttribute="trailing" id="Ghg-xS-jyh"/>
+                            <constraint firstItem="fpC-5v-S8M" firstAttribute="top" secondItem="LsJ-n0-9Ck" secondAttribute="bottom" constant="10" id="9JI-MJ-9L9"/>
+                            <constraint firstItem="LsJ-n0-9Ck" firstAttribute="top" secondItem="lm4-vV-KT2" secondAttribute="top" constant="10" id="9T1-2I-2ca"/>
+                            <constraint firstItem="lm4-vV-KT2" firstAttribute="trailing" secondItem="LsJ-n0-9Ck" secondAttribute="trailing" constant="10" id="Ghg-xS-jyh"/>
                             <constraint firstItem="lm4-vV-KT2" firstAttribute="trailing" secondItem="OfC-zV-ZAI" secondAttribute="trailing" id="LgM-La-nbf"/>
                             <constraint firstItem="Q1A-Cq-XpD" firstAttribute="bottom" secondItem="OfC-zV-ZAI" secondAttribute="top" constant="1" id="Pu1-dc-PhZ"/>
                             <constraint firstItem="lm4-vV-KT2" firstAttribute="trailing" secondItem="fpC-5v-S8M" secondAttribute="trailing" id="SG0-VQ-STW"/>
@@ -104,8 +106,8 @@
                             <constraint firstItem="lm4-vV-KT2" firstAttribute="bottom" secondItem="OfC-zV-ZAI" secondAttribute="bottom" id="ff3-Qi-rG5"/>
                             <constraint firstItem="Q1A-Cq-XpD" firstAttribute="top" secondItem="fpC-5v-S8M" secondAttribute="bottom" constant="1" id="kYT-AR-dQy"/>
                             <constraint firstItem="Q1A-Cq-XpD" firstAttribute="centerX" secondItem="lm4-vV-KT2" secondAttribute="centerX" id="kt4-Te-2D7"/>
-                            <constraint firstItem="LsJ-n0-9Ck" firstAttribute="leading" secondItem="lm4-vV-KT2" secondAttribute="leading" id="ugg-NM-m2I"/>
-                            <constraint firstItem="lm4-vV-KT2" firstAttribute="bottom" secondItem="Q1A-Cq-XpD" secondAttribute="bottom" constant="200" id="ukz-Yg-e9H"/>
+                            <constraint firstItem="LsJ-n0-9Ck" firstAttribute="leading" secondItem="lm4-vV-KT2" secondAttribute="leading" constant="10" id="ugg-NM-m2I"/>
+                            <constraint firstItem="lm4-vV-KT2" firstAttribute="bottom" secondItem="Q1A-Cq-XpD" secondAttribute="bottom" priority="999" constant="200" id="ukz-Yg-e9H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lm4-vV-KT2"/>
                     </view>
@@ -122,4 +124,7 @@
             <point key="canvasLocation" x="1308" y="-312.59370314842579"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
 </document>

@@ -6,7 +6,7 @@ func sort(_ a: inout [Int]) {
                 iMin = i
             }
         }
-        if (iMin != j) {
+        if iMin != j {
             let tempAJ = a[j]
             a[j] = a[iMin]
             a[iMin] = tempAJ
