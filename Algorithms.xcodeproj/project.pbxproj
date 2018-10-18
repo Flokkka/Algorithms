@@ -302,8 +302,7 @@
 				9B2ECE032178AB7800CB1556 /* BFS.swift */,
 				9B2ECE012178AB7100CB1556 /* BellmanFord.swift */,
 			);
-			name = SSSP;
-			path = "New Group";
+			path = SSSP;
 			sourceTree = "<group>";
 		};
 		9B52E6A61F5EBDF000CC630B /* HeapSort */ = {
@@ -477,8 +476,7 @@
 				9B2ECE082178AD3200CB1556 /* GraphTableViewCell.swift */,
 				9B2ECE072178AD3100CB1556 /* GraphTableViewCell.xib */,
 			);
-			name = "TableView Cells";
-			path = "New Group";
+			path = "TableView Cells";
 			sourceTree = "<group>";
 		};
 		9BA0E34F1F5DAF020074909C /* Sorting */ = {
